@@ -1,0 +1,119 @@
+<MyLayout>
+    BoxLayout:
+        orientation:"vertical"
+        size: root.width, root.height
+
+        TextInput:
+            id: calc_input
+            text:"0"
+            halign: "right"
+            font_size: 65
+            size_hint: (1,0.15)
+        
+        GridLayout:
+            cols:4
+            rows:5
+
+            Button:
+                text:"%"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                # on_press: root.button_press(%)
+            Button:
+                text:"CE"
+                size_hint:(0.2,0.2)
+                font_size: 32
+            Button:
+                id:clear
+                text:"C"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.clear()
+            Button:
+                text:"/"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.divide()
+
+            Button:
+                text:"7"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(7)
+            Button:
+                text:"8"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(8)
+            Button:
+                text:"9"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(9)
+            Button:
+                text:"X"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.multiply()
+
+            Button:
+                text:"4"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(4)
+            Button:
+                text:"5"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(5)
+            Button:
+                text:"6"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(6)
+            Button:
+                text:"-"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.subtract()
+
+            Button:
+                text:"1"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(1)
+            Button:
+                text:"2"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(2)
+            Button:
+                text:"3"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(3)
+            Button:
+                text:"+"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.add()
+
+            Button:
+                text:"+/-"
+                size_hint:(0.2,0.2)
+                font_size: 32
+            Button:
+                text:"0"
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.button_press(0)
+            Button:
+                text:"."
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.decimal()
+            Button:
+                text:"="
+                size_hint:(0.2,0.2)
+                font_size: 32
+                on_press: root.equals()
